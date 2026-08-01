@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#FF78AC,#A8D5E3,#F2F0EA);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:550px;
+}
+
+.converter{
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(15px);
+    border:2px solid rgba(255,255,255,0.4);
+    border-radius:20px;
+    padding:40px;
+    color:#444;
+    box-shadow:0 15px 35px rgba(255,120,172,0.25);
+}
+
+.converter h1{
+    text-align:center;
+    margin-bottom:10px;
+    font-size:32px;
+    color:#FF4F95;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#555;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:2px solid #A8D5E3;
+    outline:none;
+    border-radius:10px;
+    font-size:17px;
+    background:#F2F0EA;
+    color:#444;
+    transition:0.3s;
+}
+
+input:focus,
+select:focus{
+    border-color:#FF78AC;
+    box-shadow:0 0 10px rgba(255,120,172,0.35);
+}
+
+select{
+    cursor:pointer;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#FF78AC;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#A8D5E3;
+    color:#333;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(168,213,227,0.5);
+}
+
+#error{
+    margin-top:18px;
+    text-align:center;
+    font-weight:600;
+    color:#d6336c;
+}
+
+.result{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:18px;
+}
+
+.card{
+    background:#F2F0EA;
+    border:2px solid #A8D5E3;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#FF78AC;
+    box-shadow:0 12px 25px rgba(255,120,172,0.25);
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:18px;
+    color:#FF4F95;
+}
+
+.card span{
+    font-size:24px;
+    font-weight:bold;
+    color:#444;
+}
+
+@media(max-width:600px){
+
+.converter{
+    padding:25px;
+}
+
+.converter h1{
+    font-size:26px;
+}
+
+.result{
+    grid-template-columns:1fr;
+}
+
+}
