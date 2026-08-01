@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-box">
+
+        <h1>Register</h1>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password (Min 8 Characters)"
+                required
+            >
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required
+            >
+
+            <button type="submit" class="btn">
+                Register
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+        <p class="bottom-text">
+            Already have an account?
+            <a href="index.html">Login</a>
+        </p>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+</html>
