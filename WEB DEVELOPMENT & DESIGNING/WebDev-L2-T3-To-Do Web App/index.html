@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="todo-box">
+
+        <h1><i class="fa-solid fa-list-check"></i> My To Do List</h1>
+
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Enter your task...">
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <div class="task-section">
+
+            <div class="task-list">
+
+                <div class="title">
+                    <h2>Pending Tasks</h2>
+                    <span id="pendingCount">0 Pending</span>
+                </div>
+
+                <ul id="pendingList"></ul>
+
+                <div class="empty" id="pendingEmpty">
+                    No pending tasks.
+                </div>
+
+            </div>
+
+            <div class="task-list">
+
+                <div class="title">
+                    <h2>Completed Tasks</h2>
+                    <span id="completedCount">0 Completed</span>
+                </div>
+
+                <ul id="completedList"></ul>
+
+                <div class="empty" id="completedEmpty">
+                    No completed tasks.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#FF78AC,#A8D5E3,#F2F0EA);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+}
+
+.todo-box{
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    border:2px solid rgba(255,255,255,.4);
+}
+
+.todo-box h1{
+    text-align:center;
+    color:#FF78AC;
+    margin-bottom:30px;
+    font-size:36px;
+    font-weight:700;
+}
+
+.todo-box h1 i{
+    color:#7fcde4;
+}
+
+.input-box{
+    display:flex;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.input-box input{
+    flex:1;
+    padding:16px 20px;
+    border:2px solid #A8D5E3;
+    outline:none;
+    border-radius:12px;
+    font-size:17px;
+    background:#fff;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    border-color:#FF78AC;
+    box-shadow:0 0 10px rgba(255,120,172,.3);
+}
+
+.input-box button{
+    padding:16px 28px;
+    border:none;
+    border-radius:12px;
+    background:#FF78AC;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.input-box button:hover{
+    background:#f95d99;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,120,172,.3);
+}
+
+.task-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.task-list{
+    background:#F2F0EA;
+    border-radius:18px;
+    padding:22px;
+    min-height:420px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.title h2{
+    font-size:22px;
+    color:#444;
+}
+
+.title span{
+    background:#A8D5E3;
+    color:#333;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    background:#fff;
+    border-left:6px solid #FF78AC;
+    border-radius:12px;
+    padding:16px;
+    margin-bottom:15px;
+    animation:fade .4s ease;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+li:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+.task-text{
+    font-size:17px;
+    color:#333;
+    font-weight:500;
+    word-break:break-word;
+}
+
+.time{
+    font-size:12px;
+    color:#777;
+    margin-top:6px;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+    flex-wrap:wrap;
+}
+
+.actions button{
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    padding:9px 15px;
+    border-radius:8px;
+    transition:.3s;
+    font-size:14px;
+    font-weight:500;
+}
+
+.complete{
+    background:#4CAF50;
+}
+
+.complete:hover{
+    background:#3d9442;
+}
+
+.edit{
+    background:#A8D5E3;
+    color:#333;
+}
+
+.edit:hover{
+    background:#8cc7d8;
+}
+
+.delete{
+    background:#FF78AC;
+}
+
+.delete:hover{
+    background:#f95d99;
+}
+
+.undo{
+    background:#ffb347;
+}
+
+.undo:hover{
+    background:#f8a11d;
+}
+
+.actions button:hover{
+    transform:scale(1.05);
+}
+
+.empty{
+    text-align:center;
+    color:#888;
+    padding:60px 0;
+    font-size:17px;
+}
+
+.completed{
+    opacity:.8;
+}
+
+.completed .task-text{
+    text-decoration:line-through;
+    color:#888;
+}
+
+input.edit-input{
+    width:100%;
+    padding:10px;
+    border:2px solid #FF78AC;
+    border-radius:8px;
+    outline:none;
+    font-size:16px;
+    background:#fff;
+}
+
+input.edit-input:focus{
+    box-shadow:0 0 8px rgba(255,120,172,.3);
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:900px){
+
+.task-section{
+    grid-template-columns:1fr;
+}
+
+.input-box{
+    flex-direction:column;
+}
+
+.input-box button{
+    width:100%;
+}
+
+.todo-box{
+    padding:25px;
+}
+
+.todo-box h1{
+    font-size:30px;
+}
+
+.title h2{
+    font-size:20px;
+}
+
+}
